@@ -18,24 +18,10 @@
   <link rel="stylesheet" href="stylesheets/app.css">
   <link rel="stylesheet" href="stylesheets/offcanvas.css">
   <link rel="stylesheet" href="foundation-icons/foundation-icons.css" />
-
+<SCRIPT type="text/javascript" 
+    src="http://code.jquery.com/jquery-latest.js"></SCRIPT>
   <!--script src="javascripts/foundation/modernizr.foundation.js"></script-->
 
-<script src="//connect.soundcloud.com/sdk.js"></script>
-<script>
-// initialize client with app credentials
-SC.initialize({
-  client_id: '74e750f2728e9c5bba35a36bf889001b',
-  redirect_uri: 'my-app://daisey.com/callback.html'
-});
-
-// initiate auth popup
-SC.connect(function() {
-  SC.get('/me', function(me) { 
-    alert('Hello, ' + me.username); 
-  });
-});
-</script>
 
 
 </head>
@@ -46,13 +32,10 @@ SC.connect(function() {
 		<nav id="topMenu" role="navigation">
        
     	<ul id="nav" class="nav-bar">
-        <li>
-				<a href="" class="right">Library <i class="fi-music"></i></a>
-        </li>
 
         <li style="display: inline;" class="pad">
 
-       <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F12068436%3Fsecret_token%3Ds-DXJT9"></iframe>
+       <iframe width="100%" height="380" style="margin-bottom:-13px;" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F12068436%3Fsecret_token%3Ds-DXJT9"></iframe>
 
         </li>
 			</ul>
@@ -80,9 +63,6 @@ SC.connect(function() {
             </li>
           </ul>
 
-        
-          
-
 		</header>
 
 
@@ -95,71 +75,72 @@ SC.connect(function() {
         <div class="row">
           <div class="twelve columns">
 
-            <p>
-              <div id="timeline">
-                <table>
-                  <thead>
-                    <tr>
-                    <th>0:00</th>
-                    <th>0:30</th>
-                    <th>1:00</th>
-                    <th>1:30</th>
-                    <th>2:00</th>
-                  </tr>
-                  </thead>
-                <tbody>
-                    <tr>
-                    <td><div id="two" class="vevent">
-                      <abbr><time datetime="1999-06-01" class="dtstart value-title" title="1999-06-01">Verse 1</time></abbr>
-                      <p class="grey tiprows1 summary" tabindex="2">Every day is magical <span> be it beautiful or tragical<br/>living and learning feeling and growing<br/>don't stop!<br/></span></p>
-                  </div></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                    <tr>
-                    <td><div id="one" class="vevent">
-                      <abbr><time datetime="1998-05-17" class="dtstart value-title" title="1998-05-17">Chorus</time></abbr>
-                      <p class="blue tiprows2 summary" tabindex="1">Yeah yeah! This is the chorus!</p>
-                  </div></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                    <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><div id="three" class="vevent">
-                  <abbr><time datetime="2001-02-06" class="dtstart value-title" title="2001-02-06">Bridge</time></abbr>
-                  <p class="green tiprows1 summary" tabindex="4">Every day is magical <span> be it beautiful or tragical<br/>living and learning feeling and growing<br/>don't stop!<br/></span></p>
-                  </div></td>
-                  <td></td>
-                  </tr>
-                    <tr>
-                    <td></td>
-                    <td></td>
-                    <td><div id="four" class="vevent">
-                  
-                  <abbr><time datetime="2010-08-18" class="dtstart value-title" title="2010-08-18">Verse 2</time></abbr>
-                  <p class="grey tiprows1 summary" tabindex="3">Every day is magical <span> be it beautiful or tragical<br/>living and learning feeling and growing<br/>don't stop!<br/></span></p>
-                  </div></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-                </table>
-              </div>
-            </p>
-                <p id="legend">Legend: 
-                  <span class="label radius">Chorus</span>
-                  <span class="label radius secondary">Verse 1</span>
-                  <span class="label radius success">Bridge</span>
+            <p id="legend">Legend: 
+                  <span class="label radius labelIntro" id="stopIntro">Intro</span>
+                  <span class="label radius labelVerse" id="stopVerse">Verse 1</span>
+                  <span class="label radius labelChorus" id="stopChorus">Chorus</span>
+                  <span class="label radius labelBridge" id="stopBridge">Bridge</span>
+                  <span class="label radius labelFinalChorus" id="stopFinal">Final Chorus</span>
                 </p>
 
 
+            <p>
+              <div id="timeline">
+                <div id="scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>0:00</th>
+                      <th>0:30</th>
+                      <th>1:00</th>
+                      <th>1:30</th>
+                      <th>2:00</th>
+                    </tr>
+                  </thead>
+                <tbody>
+                    <tr>
+                      <td><div id="one" class="vevent">
+                        <abbr><time datetime="1998-05-17" class="dtstart value-title" title="1998-05-17">Intro - </time>
+                          <span class="comments">
+                            <i class="fi-comment"></i> 4</abbr>
+                        <p class="labelIntro tiprows2 summary" tabindex="1">Yeah yeah!<br/>This is the intro!</p>
+                        </div></td>
+
+                      <td><div id="two" class="vevent">
+                        <abbr><time datetime="1999-06-01" class="dtstart value-title" title="1999-06-01">Verse 1</time></abbr><p class="labelVerse tiprows1 summary" tabindex="2">Every day is magical <span> be it beautiful or tragical<br/>living and learning feeling and growing<br/>don't stop!<br/></span></p>
+                        </div></td>
+
+                      <td><div id="three" class="vevent">
+                        <abbr><time datetime="2001-02-06" class="dtstart value-title" title="2001-02-06">Chorus</time></abbr>
+                        <p class="labelChorus tiprows1 summary" tabindex="4">Every day is magical <span> be it beautiful or tragical<br/>living and learning feeling and growing<br/>don't stop!<br/></span></p>
+                        </div></td>
+
+                      <td><div id="four" class="vevent">
+                        <abbr><time datetime="2010-08-18" class="dtstart value-title" title="2010-08-18">Bridge</time></abbr>
+                        <p class="labelBridge tiprows1 summary" tabindex="3">Every day is magical <span> be it beautiful or tragical<br/>living and learning feeling and growing<br/>don't stop!<br/></span></p>
+                        </div></td>
+
+                      <td><div id="five" class="vevent">
+                        <abbr><time datetime="2010-08-18" class="dtstart value-title" title="2010-08-18">Final Chorus</time></abbr>
+                        <p class="labelFinalChorus tiprows1 summary" tabindex="3">Every day is magical <span> be it beautiful or tragical<br/>living and learning feeling and growing<br/>don't stop!<br/></span></p></div></td>
+
+                    </tr>
+
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+
+                </tbody>
+                </table>
+              </div>
+            </div>
+            </p>
+               
           </div>
         </div>  
 
@@ -167,18 +148,50 @@ SC.connect(function() {
   			<div class="row">
           <div class="twelve columns">
 
-
-
-            
             <p class="text-center">
-              <button class="secondary radius"><i class="fi-loop large"></i></button>
-              <button class="primary radius"><i class="fi-play large"></i></button>
-              <button class="alert radius"><i class="fi-record large"></i></button>
+              <button class="secondary radius" id="start"><i class="fi-loop large"></i></button>
+              <button class="secondary radius" id="left"><i class="fi-play large"></i></button>
+              <button class="secondary radius"><i class="fi-record large"></i></button>
               <button class="secondary radius"><i class="fi-stop large"></i></button>
-              <button class="secondary radius"><i class="fi-arrow-right large"></i></button>
-            </p>
+              <button class="secondary radius"><i class="fi-arrow-right large"></i></button> 
 
-            <p class="text-center">
+              &nbsp;
+              &nbsp;
+              &nbsp;
+
+
+
+<script>
+$( "#start" ).click(function() {
+  $( "#scroll" ).animate({ "left": "0px" }, "slow" );
+});
+ 
+$( "#left" ).click(function(){
+  $( "#scroll" ).animate({ "left": "450px" }, "slow" );
+});
+ 
+$( "#stopIntro" ).click(function(){
+  $( "#scroll" ).animate({ "left": "0px" }, "slow" );
+});
+ 
+$( "#stopVerse" ).click(function(){
+  $( "#scroll" ).animate({ "left": "-360px" }, "slow" );
+});
+ 
+$( "#stopChorus" ).click(function(){
+  $( "#scroll" ).animate({ "left": "-720px" }, "slow" );
+});
+ 
+$( "#stopBridge" ).click(function(){
+  $( "#scroll" ).animate({ "left": "-1080px" }, "slow" );
+});
+ 
+$( "#stopFinal" ).click(function(){
+  $( "#scroll" ).animate({ "left": "-1440px" }, "slow" );
+});
+</script>
+      
+              <button class="secondary radius"><i class="fi-arrow-up large"></i></button>
               <button class="secondary radius"><i class="fi-share large"></i></button>      
               <button class="secondary radius"><i class="fi-comment large"></i></button>
             </p>
@@ -221,7 +234,7 @@ SC.connect(function() {
   		<section id="sidebar" role="complementary">
 
         <div>
-          <h4>Track Name</h4>
+          <h4>The Way You Do</h4>
           <p><img src="images/user_Batsauce.jpg" class="thumb left">
             <i class="label primary">Batsauce</i> 
             <i class="label secondary">producer</i> 
