@@ -54,7 +54,7 @@
     		</nav>
 		  </div>
 
-          <ul class="nav-bar show-for-small pad" style="margin-top: 0px;">
+          <ul class="nav-bar show-for-small pad" style="width: 100%; z-index: 10; position: fixed; margin-top: 0px;">
             <li>
               <a id="menuButton" href="#menu" style="dispaly: inline; float: right;">
                 SoundPad <i class="fi-star"></i></a>
@@ -67,7 +67,7 @@
 
 
 
-		<div class="row">
+		<div class="row" style="padding-top: 50px;">
   		<section role="main">
 
 
@@ -100,28 +100,36 @@
                 <tbody>
                     <tr>
                       <td><div id="one" class="vevent">
-                        <abbr><time datetime="1998-05-17" class="dtstart value-title" title="1998-05-17">Intro - </time>
+                        <abbr><time datetime="1998-05-17" class="dtstart value-title" title="1998-05-17">Intro</time>
                           <span class="comments">
-                            <i class="fi-comment"></i> 4</abbr>
+                            <a href=""><i class="fi-comment"></i> 4</a></span></abbr>
                         <p class="labelIntro tiprows2 summary" tabindex="1">Yeah yeah!<br/>This is the intro!</p>
                         </div></td>
 
                       <td><div id="two" class="vevent">
-                        <abbr><time datetime="1999-06-01" class="dtstart value-title" title="1999-06-01">Verse 1</time></abbr><p class="labelVerse tiprows1 summary" tabindex="2">Every day is magical <span> be it beautiful or tragical<br/>living and learning feeling and growing<br/>don't stop!<br/></span></p>
+                        <abbr><time datetime="1999-06-01" class="dtstart value-title" title="1999-06-01">Verse 1</time>
+                          <span class="comments">
+                            <a href=""><i class="fi-comment"></i> 4</a></span></abbr><p class="labelVerse tiprows1 summary" tabindex="2">Every day is magical <span> be it beautiful or tragical<br/>living and learning feeling and growing<br/>don't stop!<br/></span></p>
                         </div></td>
 
                       <td><div id="three" class="vevent">
-                        <abbr><time datetime="2001-02-06" class="dtstart value-title" title="2001-02-06">Chorus</time></abbr>
+                        <abbr><time datetime="2001-02-06" class="dtstart value-title" title="2001-02-06">Chorus</time>
+                          <span class="comments">
+                            <a href=""><i class="fi-comment"></i> 4</a></span></abbr>
                         <p class="labelChorus tiprows1 summary" tabindex="4">Every day is magical <span> be it beautiful or tragical<br/>living and learning feeling and growing<br/>don't stop!<br/></span></p>
                         </div></td>
 
                       <td><div id="four" class="vevent">
-                        <abbr><time datetime="2010-08-18" class="dtstart value-title" title="2010-08-18">Bridge</time></abbr>
+                        <abbr><time datetime="2010-08-18" class="dtstart value-title" title="2010-08-18">Bridge</time>
+                          <span class="comments">
+                            <a href=""><i class="fi-comment"></i> 4</a></span></abbr>
                         <p class="labelBridge tiprows1 summary" tabindex="3">Every day is magical <span> be it beautiful or tragical<br/>living and learning feeling and growing<br/>don't stop!<br/></span></p>
                         </div></td>
 
                       <td><div id="five" class="vevent">
-                        <abbr><time datetime="2010-08-18" class="dtstart value-title" title="2010-08-18">Final Chorus</time></abbr>
+                        <abbr><time class="dtstart value-title">Final Chorus</time>
+                          <span class="comments">
+                            <a href=""><i class="fi-comment"></i> 4</a></span></abbr>
                         <p class="labelFinalChorus tiprows1 summary" tabindex="3">Every day is magical <span> be it beautiful or tragical<br/>living and learning feeling and growing<br/>don't stop!<br/></span></p></div></td>
 
                     </tr>
@@ -153,7 +161,6 @@
               <button class="secondary radius" id="left"><i class="fi-play large"></i></button>
               <button class="secondary radius"><i class="fi-record large"></i></button>
               <button class="secondary radius"><i class="fi-stop large"></i></button>
-              <button class="secondary radius"><i class="fi-arrow-right large"></i></button> 
 
               &nbsp;
               &nbsp;
@@ -213,10 +220,6 @@ $( "#stopFinal" ).click(function(){
 
 <h2>SoundPad</h2>
   
-
-        <div id='player'>asdf</div>
-
-
 <p>
   Modern day song writers often write lyrics over beats in mp3 format. When writing lyrics you need the ability to jump around the track so you can work on separate sections, like the chorus, verse 1, outro, etc. You need the ability to jot down ideas, both as written lyrics and as recorded rough takes. The beatmaker and the song writer need the ability to collaborate. This is how songs are written. It's a process.
 </p>
@@ -233,8 +236,10 @@ $( "#stopFinal" ).click(function(){
 
   		<section id="sidebar" role="complementary">
 
-        <div>
-          <h4>The Way You Do</h4>
+
+        <div class="boxTrack">
+          <h4>The Way You Do
+           <div class="time">2:07</div></time></h4>
           <p><img src="images/user_Batsauce.jpg" class="thumb left">
             <i class="label primary">Batsauce</i> 
             <i class="label secondary">producer</i> 
@@ -253,26 +258,6 @@ $( "#stopFinal" ).click(function(){
           </p>
         </div>
 
-
-        <div>
-          <h4>Track Name</h4>
-          <p><img src="images/user_Batsauce.jpg" class="thumb left">
-            <i class="label primary">Batsauce</i> 
-            <i class="label secondary">producer</i> 
-            <i class="label secondary">writer</i>
-            <br/>
-            <i class="label alert">4</i> comments
-            <i class="label secondary">2</i> updates
-          </p>
-          <p><img src="images/user_Daisey.jpg" class="thumb left">
-            <i class="label primary">Daisey</i> 
-            <i class="label secondary">writer</i> 
-            <i class="label secondary">vocals</i>
-            <br/>
-            <i class="label alert">4</i> comments
-            <i class="label secondary">2</i> updates
-          </p>
-        </div>
         
 
 <br/>

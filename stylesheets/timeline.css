@@ -1,12 +1,12 @@
-#timeline   {width:550px; height: 150px; overflow:hidden; overflow-x:scroll; position:relative; border:1px solid #ccc; -webkit-box-shadow:1px 1px 3px rgba(0,0,0,0.5); -moz-box-shadow:1px 1px 3px rgba(0,0,0,0.5); box-shadow:1px 1px 3px rgba(0,0,0,0.5);}
+#timeline   { background-color: #fff; width:550px; height: 150px; overflow:hidden; overflow-x:scroll; position:relative; border:1px solid #ccc; -webkit-box-shadow:1px 1px 3px rgba(0,0,0,0.5); -moz-box-shadow:1px 1px 3px rgba(0,0,0,0.5); box-shadow:1px 1px 3px rgba(0,0,0,0.5);}
 #scroll   {
-   width:550px; height: 150px;
+   width:650px; height: 150px;
    position: absolute;
     background-color: #fff;
     left: 0px;
     }
 
-table {width:1800px; border-collapse:collapse; table-layout:fixed;}
+table {width:2000px; border-collapse:collapse; table-layout:fixed;}
 
 /*CELLS AND HEADER*/
 td, th   {padding:0; height:22px; border: 1px solid #b4ced8;}
@@ -39,6 +39,9 @@ td div p span  {position:relative; text-align:center; height:0; display:block; o
 
 /*TIP ANIMATIONS*/
 td div span, abbr{-webkit-transition:0.4s; -moz-transition:0.4s; -o-transition:0.4s; transition:0.4s;}
+
+.comments {float: right;}
+.comments i {font-size: 14px; color: #333;}
 
 /*DATES*/
 td div abbr    {font:bold 11px "Trebuchet MS", sans-serif; padding:0 3px; margin-left:8px; border:1px solid #777; border-bottom:0; border-radius:3px 3px 0 0; background:rgba(255,255,255,0.7);}
