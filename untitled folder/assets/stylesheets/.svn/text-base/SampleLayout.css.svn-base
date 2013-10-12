@@ -1,0 +1,105 @@
+
+.header {
+    position:absolute; z-index:2;
+    top:0; left:0;
+    width:100%;
+    height: 199px; /* SET THIS TO ACTUAL HEADER HEIGHT */
+}
+
+.content {
+    position: absolute; z-index: 1;
+    top:199px; left: 0; bottom: 45px; /* TOP AND BOTTOM MUST MATCH VALUES IN HEADER AND FOOTER */
+    width: 100%;    
+}
+
+#wrapper, .scrollContainer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: auto;
+}
+
+.footer {
+    position: absolute; z-index: 2;
+    bottom: 0; left: 0; width: 100%;
+    height: 45px;
+}
+
+
+.scroller ul li {
+    display: block;
+    height: 50px;
+    border: 1px solid silver;
+}
+
+
+
+#scrollContainer {
+    /*border: 1px solid red;*/
+}
+.innerScroller {
+    /*border: 1px solid blue;*/
+}
+.dialog {
+    display:none;
+}
+
+#colorbox {
+    z-index: 10;
+}
+
+
+/* Styles for the toolbar buttons */
+li.jcarousel-item a {
+    width: 80px;
+    height: 80px;
+    display: block;
+}
+
+li.jcarousel-item-1 {
+    background: url(../images/tabK12Library2.png) no-repeat;
+}
+
+li.jcarousel-item-1.selected {
+    background: url(../images/tabK12Library.png) no-repeat;
+}
+
+li.jcarousel-item-2 {
+    background: url(../images/tabLearningActivities2.png) no-repeat;
+}
+
+li.jcarousel-item-2.selected {
+    background: url(../images/tabLearningActivities.png) no-repeat;
+}
+
+li.jcarousel-item-3 {
+    background: url(../images/tabEarlyChildhood2.png) no-repeat;
+}
+
+li.jcarousel-item-3.selected {
+    background: url(../images/tabEarlyChildhood.png) no-repeat;
+}
+
+li.jcarousel-item-4 {
+    background: url(../images/tabAdultLearning2.png) no-repeat;
+}
+
+li.jcarousel-item-4.selected {
+    background: url(../images/tabAdultLearning.png) no-repeat;
+}
+
+li.jcarousel-item-5 {
+    background: url(../images/tabLearningActivities2.png) no-repeat;
+}
+
+li.jcarousel-item-5.selected {
+    background: url(../images/tabLearningActivities.png) no-repeat;
+}
+
+li.jcarousel-item-6 {
+    background: url(../images/tabEarlyChildhood2.png) no-repeat;
+}
+
+li.jcarousel-item-6.selected {
+    background: url(../images/tabEarlyChildhood.png) no-repeat;
+}

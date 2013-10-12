@@ -1,0 +1,34 @@
+10
+
+dir
+412
+svn+ssh://dtraynham@cvs.artlogic.com/alserve/svn/Bascom/GlobalChalkboard/trunk/src/cleanup/categories
+svn+ssh://dtraynham@cvs.artlogic.com/alserve/svn/Bascom
+
+
+
+2011-07-18T23:15:54.887309Z
+393
+vorlenko
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a9040588-c937-489c-bdd4-aa4f49fa8728
+
+getsubcats
+dir
+
+scripts
+dir
+

@@ -1,0 +1,40 @@
+#timeline   {width:800px; overflow:hidden; overflow-x:scroll; position:relative; border:1px solid #4f6b72; -webkit-box-shadow:1px 1px 3px rgba(0,0,0,0.5); -moz-box-shadow:1px 1px 3px rgba(0,0,0,0.5); box-shadow:1px 1px 3px rgba(0,0,0,0.5);}
+table {width:1800px; border-collapse:collapse; table-layout:fixed;}
+
+/*CELLS AND HEADER*/
+td, th   {padding:0; height:22px; border: 1px solid #b4ced8;}
+th    {font:bold 14px "Trebuchet MS", sans-serif; color:#4f6b72; letter-spacing:2px; text-align:center; background:#cae3ed;}
+
+/*BOXES*/
+td div      {float:left; height:0;}
+td div p {margin:0; text-align:center; cursor:default; font-size:14px; padding:2px; -webkit-box-shadow:1px 1px 2px #222; -moz-box-shadow:1px 1px 2px #222; box-shadow:1px 1px 2px #222;}
+
+/*BOX GROUPS*/
+.green{background:#5da423; border:1px solid #396516; color:#fff; -moz-border-radius:10px; border-radius:10px;}
+.blue{background:#2ba6cb; border:1px solid #1e728c; color: #fff; -moz-border-radius:10px; }
+.red{background:#fffdce; border:1px solid #845700; color:#333; -moz-border-radius:10px; border-radius:3px;}
+.grey{background:#e9e9e9; border:1px solid #c3c3c3; color:#1d1d1d; -moz-border-radius:10px; border-radius:3px;}
+
+
+/*INDIVIDUAL BOXES*/
+#one{width:260%;margin-left:50%;}
+#two{width:100%;margin-left:38%;}
+#three{width:150%;margin-left:10%;}
+#four{width:100%;}
+
+/*TIP CONTENT*/
+td div p span  {position:relative; text-align:center; height:0; display:block; overflow:hidden;}
+
+/*TIP SIZES*/
+.tiprows1:hover span,.tiprows1:focus span{height:1.2em;}
+.tiprows2:hover span,.tiprows2:focus span{height:2.4em;}
+
+/*TIP ANIMATIONS*/
+td div span, abbr{-webkit-transition:0.4s; -moz-transition:0.4s; -o-transition:0.4s; transition:0.4s;}
+
+/*DATES*/
+td div abbr    {font:bold 11px "Trebuchet MS", sans-serif; padding:0 3px; margin-left:8px; border:1px solid #777; border-bottom:0; border-radius:3px 3px 0 0; background:rgba(255,255,255,0.7);}
+
+/*HEADER AND LEGEND*/
+h3          {margin:10px 0;}
+#legend > div  {font-weight:normal; display:inline; font-size:70%; margin:0 5px;}

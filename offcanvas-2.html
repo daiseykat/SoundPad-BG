@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+
+	<title>Sound Pad</title>
+
+	<!-- Included CSS Files -->
+  <link rel="stylesheet" href="stylesheets/normalize.css">
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <link rel="stylesheet" href="stylesheets/offcanvas.css">
+  <link rel="stylesheet" href="foundation-icons/foundation-icons.css" />
+
+  <script src="javascripts/foundation/modernizr.foundation.js"></script>
+
+</head>
+
+  <body id="page" class="off-canvas slide-nav">
+	<div class="">
+
+		<nav id="topMenu" role="navigation">
+    	<ul id="nav" class="nav-bar">
+				<li><a href="">Library
+          <i class="fi-music"></i></a></li>
+				<li><a href="">
+          <span class="label alert radius">7</span>
+          Comments 
+          <i class="fi-comment"></i></a></li>
+				<li><a href="">Share <i class="fi-share"></i></a></li>
+			</ul>
+		</nav>
+
+		<header id="header" class="row">
+		  <div class="eight columns phone-two">
+		    <nav id="menu" role="navigation" class="hide-for-small">
+    			<ul id="mainNav" class="nav-bar">
+            <li><a href="">One</a></li>
+    				<li><a href="">Two</a></li>
+    				<li><a href="">Three</a></li>
+    				<li><a href="">Four</a></li>
+    			</ul>
+    		</nav>
+		  </div>
+
+          <ul class="nav-bar show-for-small pad" style="margin-top: 0px;">
+            <li>
+              <a id="menuButton" href="#menu" style="dispaly: inline; float: right;">
+                SoundPad <i class="fi-star"></i></a>
+                <a href=""><img class="right" src="http://connect.soundcloud.com/2/btn-connect-s.png"></a>
+              <a id="sidebarButton" href="#sidebar" style="margin-left: 20px; float: left;"><i class="fi-widget"></i> Tools</a>
+              <br clear="both">
+            </li>
+          </ul>
+
+        
+          
+
+		</header>
+
+
+
+		<div class="row">
+  		<section role="main">
+
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F45966896"></iframe>
+
+
+
+  			<div class="row">
+          <div class="twelve columns">
+            <button class="tiny secondary radius"><i class="fi-play"></i></button>
+            <button class="tiny secondary radius"><i class="fi-loop"></i></button>
+
+            <button class="tiny alert radius"><i class="fi-record"></i></button>
+            <button class="tiny secondary radius"><i class="fi-share"></i></button>
+            <button class="tiny secondary radius"><i class="fi-comment"></i></button>
+            <button class="tiny secondary radius">Extend</button>
+          <p>
+            <textarea  placeholder="Intro..." class="notepadTextarea"></textarea>
+            <textarea  placeholder="Chorus..." class="notepadTextarea"></textarea>
+            <textarea  placeholder="Verse One..." class="notepadTextarea"></textarea>
+          </p>
+
+
+      		
+      		</div>
+        </div>
+  		</section>
+
+  		<section id="sidebar" role="complementary">
+        
+        <h3>Soundcloud</h3>
+        <p>Once logged in, you can access soundcloud files and users. Files can be shared privately.</p>
+
+        <h3>Playback</h3>
+				<p>You can play, loop and restart the track. Buttons should be big enough to easily/quickly manage start points so you can stay "in the flow" of writing lyrics.</p>
+
+        <h3>Loops</h3>
+        <p>You can add end/stop points to create a loop. This way, you can practice one section at a time on repeat.</p>
+
+        <h3>Lyrics</h3>
+        <p>You can write your lyrics in the notepad. Lyrics can be saved, shared and commented on by other users.</p>
+
+        <h3>Practice Mode</h3>
+        <p>You can play the track with "in-place comments" to show key words in the lyrics, such as the first few words of the next verse.</p>
+
+        <h3>Record</h3>
+        <p>You can record yourself singing over the track, so you can save and share rough ideas.</p>
+
+        <h3>Share</h3>
+        <p>You can share your files with other users, allowing them to leave in-place comments and feedback (similar to how Soundcloud does their comments)</p>
+
+
+  		</section>
+		</div>
+
+    <footer class="site-footer row" role="contentinfo">
+      <div class="twelve columns">SoundPad DEMO for Berlin Geekettes Hackathon
+      </div>
+    </footer>
+  </div>
+
+
+	<!-- Included JS Files -->
+  <script src="javascripts/foundation/jquery.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.reveal.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.orbit.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.forms.js"></script>
+  <script src="javascripts/foundation/jquery.placeholder.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.tooltips.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.alerts.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.buttons.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.accordion.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.navigation.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.mediaQueryToggle.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.tabs.js"></script>
+  <script src="javascripts/foundation/jquery.offcanvas.js"></script>
+  <script src="javascripts/foundation/app.js"></script>
+
+
+  <script>
+    $(document).foundation();
+  </script>
+
+</body>

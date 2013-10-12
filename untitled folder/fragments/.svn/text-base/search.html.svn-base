@@ -1,0 +1,123 @@
+<div>
+	<div id="sidebar">
+
+        <div title="Navigation">
+            <a href="javascript:display('k12English')" class="Group">
+        English</a>
+            <div class="hide" id="k12English">
+                <a href="fragments/browse.html" class="loader nestedlist Option" title="K-12 Web Library / ABCs">ABCs</a>
+                <a href="fragments/browse.html" class="loader nestedlist Option" title="K-12 Web Library / ABCs">Authors</a>
+                <a href="fragments/browse.html" class="loader nestedlist Option" title="K-12 Web Library / ABCs">Grammar</a>
+                <!--a href="#" class="Option">Literature</a-->
+                
+                    <a href="javascript:display('k12Literature')" class="Option">
+                Literature</a>
+                    <div class="hide" id="k12Literature">
+                        <a href="#" class="SubOption">sub category</a>
+                        <a href="#" class="SubOption">sub category</a>
+                        <a href="#" class="SubOption">sub category</a>
+                        <a href="#" class="SubOption">sub category</a>
+                    </div>
+                
+                <a href="fragments/browse.html" class="loader nestedlist Option" title="K-12 Web Library / ABCs">Phonics</a>
+                <a href="fragments/browse.html" class="loader nestedlist Option" title="K-12 Web Library / ABCs">Reading</a>
+                <a href="fragments/browse.html" class="loader nestedlist Option" title="K-12 Web Library / ABCs">Spelling</a>
+                <a href="fragments/browse.html" class="loader nestedlist Option" title="K-12 Web Library / ABCs">Vocabulary</a>
+                <a href="fragments/browse.html" class="loader nestedlist Option" title="K-12 Web Library / ABCs">Writing</a>
+            </div>
+            <a href="javascript:display('k12Mathematics')" class="Group">
+        Mathematics</a>
+            <div class="hide" id="k12Mathematics">
+                <a href="fragments/browse.html" class="loader nestedlist Option" title="K-12 Web Library / ABCs">Algebra</a>
+                <a href="fragments/browse.html" class="loader nestedlist Option" title="K-12 Web Library / ABCs">Calculus</a>
+                <a href="fragments/browse.html" class="loader nestedlist Option" title="K-12 Web Library / ABCs">Currency</a>
+                <a href="fragments/browse.html" class="loader nestedlist Option" title="K-12 Web Library / ABCs">Geometry</a>
+                <a href="fragments/browse.html" class="loader nestedlist Option" title="K-12 Web Library / ABCs">Graphing</a>
+                <a href="fragments/browse.html" class="loader nestedlist Option" title="K-12 Web Library / ABCs">Trigonometry</a>
+                <a href="fragments/browse.html" class="loader nestedlist Option" title="K-12 Web Library / ABCs">Whole Numbers</a>
+            </div>
+            <a href="javascript:display('k12Science')" class="Group">
+        Science</a>
+            <div class="show" id="k12Science">
+                <a href="fragments/browse.html" class="loader nestedlist Option" title="K-12 Web Library / ABCs">Earth Science</a>
+                <a href="#" class="Option SidebarSelected">Life Science</a>
+                <a href="fragments/browse.html" class="loader nestedlist Option" title="K-12 Web Library / ABCs">Physical Science</a>
+                <a href="fragments/browse.html" class="loader nestedlist Option" title="K-12 Web Library / ABCs">Science Museums</a>
+                <a href="fragments/browse.html" class="loader nestedlist Option" title="K-12 Web Library / ABCs">Scientists</a>
+                <a href="fragments/browse.html" class="loader nestedlist Option" title="K-12 Web Library / ABCs">Space Science</a>
+            </div>
+        </div>
+
+ 
+		<div class="handle"></div>
+    </div>
+    
+    
+    
+    
+    
+    
+    <div id="scrollContainer">
+        <div class="innerScroller">
+                    
+                    <div class="breadcrumbs"> 
+                        137 results
+                    </div>
+                    
+                    
+                    
+                    
+                    <div class="result">
+                        <a data-transition="slide" href="link.html">
+                            <div class="resultArrow">
+                                <h2>Lone Pine Koala Sanctuary <span>E M H</span></h2>
+                                Dedicated to the preservation of Australian wildlife, get an up-close look at these animals at the Lone Pine Koala Sanctuary in Brisbane Queensland, Australia.
+                                
+                                
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="result">
+                        <a data-transition="slide" href="link.html">
+                            <div class="resultArrow">
+                                <h2>Shadow fo the Bear <span>E M H</span></h2>
+                                Information and photos from photographer Leslie Marcucella about the Kodiak Brown Bear.
+                            </div>
+                        </a>
+                    </div>
+                    <div class="result">
+                        <a data-transition="slide" href="link.html">
+                            <div class="resultArrow">
+                                <h2>Lone Pine Koala Sanctuary <span>E M H</span></h2>
+                                Dedicated to the preservation of Australian wildlife, get an up-close look at these animals at the Lone Pine Koala Sanctuary in Brisbane Queensland, Australia.
+                            </div>
+                        </a>
+                    </div>
+                    <div class="result">
+                        <a data-transition="slide" href="link.html">
+                            <div class="resultArrow">
+                                <h2>Shadow fo the Bear <span>E M H</span></h2>
+                                Information and photos from photographer Leslie Marcucella about the Kodiak Brown Bear.
+                            </div>
+                        </a>
+                    </div>
+                    <div class="result">
+                        <a data-transition="slide" href="link.html">
+                            <div class="resultArrow">
+                                <h2>Lone Pine Koala Sanctuary <span>E M H</span></h2>
+                                Dedicated to the preservation of Australian wildlife, get an up-close look at these animals at the Lone Pine Koala Sanctuary in Brisbane Queensland, Australia.
+                            </div>
+                        </a>
+                    </div>
+                    <div class="result">
+                        <a data-transition="slide" href="link.html">
+                            <div class="resultArrow">
+                                <h2>Shadow fo the Bear <span>E M H</span></h2>
+                                Information and photos from photographer Leslie Marcucella about the Kodiak Brown Bear.
+                            </div>
+                        </a>
+                    </div>
+        </div>
+	</div>
+</div>
