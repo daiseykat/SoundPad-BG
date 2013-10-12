@@ -48,4 +48,9 @@ td div abbr    {font:bold 11px "Trebuchet MS", sans-serif; padding:0 3px; margin
 
 /*HEADER AND LEGEND*/
 h3          {margin:10px 0;}
+
 #legend > div  {font-weight:normal; display:inline; font-size:70%; margin:0 5px;}
+#legend {margin-top: -3px;line-height: 30px; color: #ccc;text-transform: uppercase;font-size: 10px; margin-bottom: 0px; padding-bottom: 0px;}
+#legend div {margin-top: 3px !important;}
+
+
