@@ -1,21 +1,23 @@
-#timeline   { background-color: #fff; width:550px; height: 150px; overflow:hidden; overflow-x:scroll; position:relative; border:1px solid #ccc; -webkit-box-shadow:1px 1px 3px rgba(0,0,0,0.5); -moz-box-shadow:1px 1px 3px rgba(0,0,0,0.5); box-shadow:1px 1px 3px rgba(0,0,0,0.5);}
+#timeline   { width:550px; background-color: #ccc; height: 150px; overflow:hidden; overflow-x:scroll; position:relative; -webkit-box-shadow:1px 1px 3px rgba(0,0,0,0.5); -moz-box-shadow:1px 1px 3px rgba(0,0,0,0.5); box-shadow:1px 1px 3px rgba(0,0,0,0.5);}
 #scroll   {
-   width:650px; height: 150px;
+   width:550px; height: 150px;
    position: absolute;
-    background-color: #fff;
     left: 0px;
     }
 
-table {width:2000px; border-collapse:collapse; table-layout:fixed;}
+#timeline table {width:2200px; border: 0px; border-collapse:collapse; table-layout:fixed;
+background-color: #ccc;}
 
 /*CELLS AND HEADER*/
-td, th   {padding:0; height:22px; border: 1px solid #b4ced8;}
-th    {font:bold 14px "Trebuchet MS", sans-serif; color:#4f6b72; letter-spacing:2px; text-align:center; background:#cae3ed;}
+td, th   {padding:0; height:22px; border-left: 1px solid #444;}
+th    {font-size: 11px !important; font-weight: normal; color:#aaa !important; letter-spacing:2px; text-align:center; background:#333;}
+tr {background-image: url('../images/wave.png') !important; background-repeat: repeat-x repeat-y;}
+
 
 /*BOXES*/
 td div      {float:left; height:0;}
 td div p {margin:0; text-align:center; cursor:default; font-size:14px; padding:2px; -webkit-box-shadow:1px 1px 2px #222; -moz-box-shadow:1px 1px 2px #222; box-shadow:1px 1px 2px #222;}
-
+#timeline table td {background-color: #ccc; }
 
 /*BOX GROUPS*/
 .labelIntro {background-color: #898989 !important; color: #fff;}
@@ -28,7 +30,8 @@ td div p {margin:0; text-align:center; cursor:default; font-size:14px; padding:2
 #one{width:100%;margin-left:0%;}
 #two{width:100%;margin-left:0%;}
 #three{width:100%;margin-left:0%;}
-#four{width:100%;}
+#four{width:100%; margin-left: 0%;}
+#five{width:80%; margin-left: 0%;}
 
 /*TIP CONTENT*/
 td div p span  {position:relative; text-align:center; height:0; display:block; overflow:hidden;}
@@ -44,7 +47,7 @@ td div span, abbr{-webkit-transition:0.4s; -moz-transition:0.4s; -o-transition:0
 .comments i {font-size: 14px; color: #333;}
 
 /*DATES*/
-td div abbr    {font:bold 11px "Trebuchet MS", sans-serif; padding:0 3px; margin-left:8px; border:1px solid #777; border-bottom:0; border-radius:3px 3px 0 0; background:rgba(255,255,255,0.7);}
+td div abbr    {font:bold 11px "Trebuchet MS", sans-serif; padding:0 3px; margin-left:8px; border:1px solid #777; border-bottom:0; border-radius:3px 3px 0 0;}
 
 /*HEADER AND LEGEND*/
 h3          {margin:10px 0;}

@@ -164,9 +164,12 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
 input[type="text"][disabled], input[type="password"][disabled], input[type="date"][disabled], input[type="datetime"][disabled], input[type="email"][disabled], input[type="number"][disabled], input[type="search"][disabled], input[type="tel"][disabled], input[type="time"][disabled], input[type="url"][disabled], textarea[disabled] { background-color: #ddd; }
 
 textarea { height: auto; }
-textarea.notepadTextarea { outline: none; font-size: 30px;}
+textarea.notepadTextarea {
+font-family: 'Handlee', cursive;
+ background-color: #ccc; outline: none; font-size: 30px;}
 textarea.notepadTextarea:focus {height: 200px;}
-input.notepadTitle {font-size: 30px !important; height: 50px;}
+input.notepadTitle {font-family: 'Handlee', cursive;
+background-color: #ccc; font-size: 24px !important; font-weight: normal !important; height: 38px; margin-top: 20px;}
 
 select { width: 100%; }
 
@@ -319,8 +322,8 @@ img, object, embed { max-width: 100%; height: auto; }
 
 
 /** sidebar track info  **/
-.thumb {height: 40px; margin-right: 10px; margin-bottom: 5px;}
-.handle {color: #777; font-style: normal; font-size: 12px; font-weight: bold;}
+.thumb {height: 40px; margin-right: 5px; margin-bottom: 5px;}
+.handle {color: #777; font-style: normal; font-size: 12px;}
 
 object, embed { height: 100%; }
 
@@ -1235,14 +1238,17 @@ table.show-for-xlarge, table.show-for-large, table.hide-for-small, table.hide-fo
   .top-bar ul li .button.small { margin: 0 !important; display: inline-block; width: 100%; } }
 
 #page {background-image: url('../images/tweed.png');}
-
+h1, h2, h3 {font-family: 'Handlee', cursive;}
 
 .boxTrack {-webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px;
 background-color: #ccc; padding: 5px 10px 5px 10px; margin-top: 10px;}
 .boxTrack p:last-child {margin-bottom: 0px;}
-.boxTrack h4 {font-size: 18px; margin: 0px; margin-bottom: 5px;}
+.boxTrack:hover {background-color: #efefef;-webkit-transition:0.4s; -moz-transition:0.4s; -o-transition:0.4s; transition:0.4s;}
+
+.boxTrack h4 {font-weight: normal; color: #0066cc; font-size: 18px; margin: 0px; margin-bottom: 5px;}
 .boxTrack h4 div {font-size: 12px; color: #666; float: right;}
-.boxUser {float: left; margin-right: 10px; margin-bottom: 0px; border-bottom: 1px solid #ccc;}
+.boxUser {margin-bottom: 0px;}
 .boxStats {display: block; text-align: right; font-size: 14px; color: #666 !important;}
 .boxStats i {font-size: 15px; padding: 5px 0px;}
-
+.userBox {float: left; margin-right: 20px;}
+p {outline: none;}

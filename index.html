@@ -2,7 +2,8 @@
 
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> 
+<html lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
 
@@ -17,11 +18,28 @@
   <link rel="stylesheet" href="stylesheets/foundation.css">
   <link rel="stylesheet" href="stylesheets/app.css">
   <link rel="stylesheet" href="stylesheets/offcanvas.css">
+  <link href='http://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
+
   <link rel="stylesheet" href="foundation-icons/foundation-icons.css" />
-<SCRIPT type="text/javascript" 
+  <SCRIPT type="text/javascript" 
     src="http://code.jquery.com/jquery-latest.js"></SCRIPT>
   <!--script src="javascripts/foundation/modernizr.foundation.js"></script-->
 
+<script src="http://connect.soundcloud.com/sdk.js"></script>
+<script>
+// initialize client with app credentials
+SC.initialize({
+  client_id: '74e750f2728e9c5bba35a36bf889001b',
+  redirect_uri: 'http://127.0.0.1:3000/callback.html'
+});
+
+// initiate auth popup
+SC.connect(function() {
+  SC.get('/me', function(me) { 
+    alert('Hello, ' + me.username); 
+  });
+});
+</script>
 
 
 </head>
@@ -74,7 +92,8 @@
 
         <div class="row">
           <div class="twelve columns">
-
+<input type="text" name="fname" placeholder="The Way You Do"  class="notepadTitle">
+            
             <p id="legend">Structure:<br/>
                   <div class="label radius labelIntro" id="stopIntro">Intro</div>
                   <div class="label radius labelVerse" id="stopVerse">Verse 1</div>
@@ -109,28 +128,28 @@
                       <td><div id="two" class="vevent">
                         <abbr><time datetime="1999-06-01" class="dtstart value-title" title="1999-06-01">Verse 1</time>
                           <span class="comments">
-                            <a href=""><i class="fi-comment"></i> 4</a></span></abbr><p class="labelVerse tiprows1 summary" tabindex="2">Every day is magical <span> be it beautiful or tragical<br/>living and learning feeling and growing<br/>don't stop!<br/></span></p>
+                            <a href=""><i class="fi-comment"></i> 4</a></span></abbr><p class="labelVerse tiprows1 summary" tabindex="2">This is a verse! <span> words are awesome!<br/>Everybody love verses!</span></p>
                         </div></td>
 
                       <td><div id="three" class="vevent">
                         <abbr><time datetime="2001-02-06" class="dtstart value-title" title="2001-02-06">Chorus</time>
                           <span class="comments">
                             <a href=""><i class="fi-comment"></i> 4</a></span></abbr>
-                        <p class="labelChorus tiprows1 summary" tabindex="4">Every day is magical <span> be it beautiful or tragical<br/>living and learning feeling and growing<br/>don't stop!<br/></span></p>
+                        <p class="labelChorus tiprows1 summary" tabindex="4">Look guys! It's a chorus!<span> yeah yeah yeah<br/>baby baby oooh</span></p>
                         </div></td>
 
                       <td><div id="four" class="vevent">
                         <abbr><time datetime="2010-08-18" class="dtstart value-title" title="2010-08-18">Bridge</time>
                           <span class="comments">
                             <a href=""><i class="fi-comment"></i> 4</a></span></abbr>
-                        <p class="labelBridge tiprows1 summary" tabindex="3">Every day is magical <span> be it beautiful or tragical<br/>living and learning feeling and growing<br/>don't stop!<br/></span></p>
+                        <p class="labelBridge tiprows1 summary" tabindex="3">Take it to the bridge!<span> like water under the bridge<br/>look guys! it's a bridge!</span></p>
                         </div></td>
 
                       <td><div id="five" class="vevent">
                         <abbr><time class="dtstart value-title">Final Chorus</time>
                           <span class="comments">
                             <a href=""><i class="fi-comment"></i> 4</a></span></abbr>
-                        <p class="labelFinalChorus tiprows1 summary" tabindex="3">Every day is magical <span> be it beautiful or tragical<br/>living and learning feeling and growing<br/>don't stop!<br/></span></p></div></td>
+                        <p class="labelFinalChorus tiprows1 summary" tabindex="3">Final Chorus yeah yeah!<span> we made it to the end<br/>such a beautiful journey!<br/></span></p></div></td>
 
                     </tr>
 
@@ -157,77 +176,31 @@
           <div class="twelve columns">
 
             <p class="text-center">
-              <button class="secondary radius" id="start"><i class="fi-loop large"></i></button>
-              <button class="secondary radius" id="left"><i class="fi-play large"></i></button>
-              <button class="secondary radius"><i class="fi-record large"></i></button>
-              <button class="secondary radius"><i class="fi-stop large"></i></button>
+              <button class="secondary radius small" id="start"><i class="fi-loop large"></i></button>
+              <button class="secondary radius small" id="end"><i class="fi-play large"></i></button>
+              <button class="secondary radius small"><i class="fi-record large"></i></button>
+              <button class="secondary radius small"><i class="fi-stop large"></i></button>
 
               &nbsp;
               &nbsp;
               &nbsp;
 
-
-
-<script>
-$( "#start" ).click(function() {
-  $( "#scroll" ).animate({ "left": "0px" }, "slow" );
-});
- 
-$( "#left" ).click(function(){
-  $( "#scroll" ).animate({ "left": "450px" }, "slow" );
-});
- 
-$( "#stopIntro" ).click(function(){
-  $( "#scroll" ).animate({ "left": "0px" }, "slow" );
-});
- 
-$( "#stopVerse" ).click(function(){
-  $( "#scroll" ).animate({ "left": "-360px" }, "slow" );
-});
- 
-$( "#stopChorus" ).click(function(){
-  $( "#scroll" ).animate({ "left": "-720px" }, "slow" );
-});
- 
-$( "#stopBridge" ).click(function(){
-  $( "#scroll" ).animate({ "left": "-1080px" }, "slow" );
-});
- 
-$( "#stopFinal" ).click(function(){
-  $( "#scroll" ).animate({ "left": "-1440px" }, "slow" );
-});
-</script>
-      
-              <button class="secondary radius"><i class="fi-arrow-up large"></i></button>
-              <button class="secondary radius"><i class="fi-share large"></i></button>      
-              <button class="secondary radius"><i class="fi-comment large"></i></button>
+              <button class="secondary radius small"><i class="fi-arrow-up large"></i></button>
+              <button class="secondary radius small"><i class="fi-share large"></i></button>      
+              <button class="secondary radius small"><i class="fi-comment large"></i></button>
             </p>
 
-            <p>
+            <!--p>
               <a href="" class=" left secondary tiny">Share <i class="fi-share large"></i></a>
               <a href="" class=" right secondary tiny">
               <span class="label alert radius">7</span> Comments <i class="fi-comment large"></i></a>
+            </p-->
+
+            <p>
+              <textarea  placeholder="Intro..." class="notepadTextarea"></textarea>
+              <textarea  placeholder="Chorus..." class="notepadTextarea"></textarea>
+              <textarea  placeholder="Verse One..." class="notepadTextarea"></textarea>
             </p>
-
-          <p>
-            <input type="text" name="fname" placeholder="Title"  class="notepadTitle">
-            <textarea  placeholder="Intro..." class="notepadTextarea"></textarea>
-            <textarea  placeholder="Chorus..." class="notepadTextarea"></textarea>
-            <textarea  placeholder="Verse One..." class="notepadTextarea"></textarea>
-          </p>
-
-
-
-<h2>SoundPad</h2>
-  
-<p>
-  Modern day song writers often write lyrics over beats in mp3 format. When writing lyrics you need the ability to jump around the track so you can work on separate sections, like the chorus, verse 1, outro, etc. You need the ability to jot down ideas, both as written lyrics and as recorded rough takes. The beatmaker and the song writer need the ability to collaborate. This is how songs are written. It's a process.
-</p>
-
-<p>
-  SoundPad would integrate the process of listening to SoundCloud files, segmenting and looping audio, writing lyrics, recording rough takes, sharing private files, and creating interaction between the song writer and the music producers - in one app.
-</p>  
-
 
       		
       		</div>
@@ -241,47 +214,80 @@ $( "#stopFinal" ).click(function(){
           <h4>The Way You Do
            <div class="time">2:07</div></time></h4>
           <p class="boxUser">
-            <img src="images/user_Batsauce.jpg" class="thumb left">
-            <i class="handle">Daisey</i>
-            <img src="images/user_Daisey.jpg" class="thumb left">
-            <i class="handle">Daisey</i>
+            <div class="userBox">
+              <img src="images/user_Batsauce.jpg"  class="thumb left">
+              <i class="handle">Batsauce</i>
+            </div>
+            <div class="userBox">
+              <img src="images/user_Daisey.jpg" class="thumb left">
+              <i class="handle">Daisey</i>
+            </div>
           </p>
             <hr>
             <div class="boxStats">
             <i class="fi-thumbnails"></i>&nbsp;5&nbsp;&nbsp;|&nbsp;&nbsp; 
             <i class="fi-play"></i>&nbsp;47&nbsp;&nbsp;|&nbsp;&nbsp; 
-            <i class="fi-comment"></i>&nbsp;12
+            <span onClick = "document.getElementById('trackBox').style.height = '500px';"><i class="fi-comment"></i>&nbsp;12</span>
           </div>
           </p>
         </div>
 
-        
 
-<br/>
-<br/>
-<br/>
-<br/>
+        <div class="boxTrack">
+          <h4>Funky Stuff
+           <div class="time">2:07</div></time></h4>
+          <p class="boxUser">
+            <div class="userBox">
+              <img src="images/user_Batsauce.jpg"  class="thumb left">
+              <i class="handle">Batsauce</i>
+            </div>
+            <div class="userBox">
+              <img src="images/user_Daisey.jpg" class="thumb left">
+              <i class="handle">Daisey</i>
+            </div>
+          </p>
+            <hr>
+            <div class="boxStats">
+            <i class="fi-thumbnails"></i>&nbsp;5&nbsp;&nbsp;|&nbsp;&nbsp; 
+            <i class="fi-play"></i>&nbsp;47&nbsp;&nbsp;|&nbsp;&nbsp; 
+            <span onClick = "document.getElementById('trackBox').style.height = '500px';"><i class="fi-comment"></i>&nbsp;12</span>
+          </div>
+          </p>
+        </div>
 
-        <h3>Soundcloud</h3>
-        <p>Once logged in, you can access soundcloud files and users. Files can be shared privately.</p>
 
-        <h3>Playback</h3>
-				<p>You can play, loop and restart the track. Buttons should be big enough to easily/quickly manage start points so you can stay "in the flow" of writing lyrics.</p>
+                <div class="boxTrack">
+          <h4>Hackathon Fever
+           <div class="time">2:07</div></time></h4>
+          <p class="boxUser">
+            <div class="userBox">
+              <img src="images/user_Batsauce.jpg"  class="thumb left">
+              <i class="handle">Batsauce</i>
+            </div>
+            <div class="userBox">
+              <img src="images/user_Daisey.jpg" class="thumb left">
+              <i class="handle">Daisey</i>
+            </div>
+          </p>
+            <hr>
+            <div class="boxStats">
+            <i class="fi-thumbnails"></i>&nbsp;5&nbsp;&nbsp;|&nbsp;&nbsp; 
+            <i class="fi-play"></i>&nbsp;47&nbsp;&nbsp;|&nbsp;&nbsp; 
+            <span onClick = "document.getElementById('trackBox').style.height = '500px';"><i class="fi-comment"></i>&nbsp;12</span>
+          </div>
+          </p>
+        </div>
 
-        <h3>Loops</h3>
-        <p>You can add end/stop points to create a loop. This way, you can practice one section at a time on repeat.</p>
 
-        <h3>Lyrics</h3>
-        <p>You can write your lyrics in the notepad. Lyrics can be saved, shared and commented on by other users.</p>
+<h2>SoundPad</h2>
+  
+<p>
+  Modern day song writers often write lyrics over beats in mp3 format. When writing lyrics you need the ability to jump around the track so you can work on separate sections, like the chorus, verse 1, outro, etc. You need the ability to jot down ideas, both as written lyrics and as recorded rough takes. The beatmaker and the song writer need the ability to collaborate. This is how songs are written. It's a process.
+</p>
 
-        <h3>Practice Mode</h3>
-        <p>You can play the track with "in-place comments" to show key words in the lyrics, such as the first few words of the next verse.</p>
-
-        <h3>Record</h3>
-        <p>You can record yourself singing over the track, so you can save and share rough ideas.</p>
-
-        <h3>Share</h3>
-        <p>You can share your files with other users, allowing them to leave in-place comments and feedback (similar to how Soundcloud does their comments)</p>
+<p>
+  SoundPad would integrate the process of listening to SoundCloud files, segmenting and looping audio, writing lyrics, recording rough takes, sharing private files, and creating interaction between the song writer and the music producers - in one app.
+</p> 
 
 
   		</section>
@@ -309,6 +315,43 @@ $( "#stopFinal" ).click(function(){
   <script src="javascripts/foundation/jquery.foundation.tabs.js"></script>
   <script src="javascripts/foundation/jquery.offcanvas.js"></script>
   <script src="javascripts/foundation/app.js"></script>
+
+
+<script>
+$( "#start" ).click(function() {
+  $( "#scroll" ).animate({ "left": "0px" }, "slow" );
+});
+ 
+$( "#end" ).click(function(){
+  $( "#scroll" ).animate({ "left": "-1600px" }, "slow" );
+});
+ 
+$( "#stopIntro" ).click(function(){
+  $( "#scroll" ).animate({ "left": "0px" }, "slow" );
+});
+ 
+$( "#stopVerse" ).click(function(){
+  $( "#scroll" ).animate({ "left": "-440px" }, "slow" );
+});
+ 
+$( "#stopChorus" ).click(function(){
+  $( "#scroll" ).animate({ "left": "-880px" }, "slow" );
+});
+ 
+$( "#stopBridge" ).click(function(){
+  $( "#scroll" ).animate({ "left": "-1320px" }, "slow" );
+});
+ 
+$( "#stopFinal" ).click(function(){
+  $( "#scroll" ).animate({ "left": "-1760px" }, "slow" );
+});
+
+$('div.boxTrack').click(function(){
+    $(this).animate({'height': 'auto'}, 100);
+}, function(){
+    $(this).animate({'height': '400px'}, 100);
+});
+</script>
 
 
   <script>
